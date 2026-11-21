@@ -1,0 +1,11 @@
+{
+  "name":"NaviOffline",
+  "short_name":"NaviOffline",
+  "description":"Maps and navigation — online or offline",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#f7f8fc",
+  "theme_color":"#ffffff",
+  "orientation":"portrait",
+  "icons":[]
+}
