@@ -428,3 +428,11 @@
 .dm-trip-remaining b{font-size:30px!important;line-height:1!important}
 .dm-trip-remaining small{font-size:14px!important;margin-top:5px!important}
 @media(max-width:520px){.dm-sheet{max-height:36dvh!important;padding:12px!important}.dm-route{min-height:62px!important}.dm-modes button{min-height:42px!important}.dm-maneuver-card{min-height:88px!important;padding:14px!important}.dm-maneuver-copy b{font-size:19px!important}.dm-nav-controls{top:40%!important}.dm-nav-bottom{padding:12px!important}.dm-trip-remaining b{font-size:28px!important}}
+
+/* Offline downloader layout fix */
+.download-map-functional{height:calc(100dvh - 190px);min-height:420px;position:relative;overflow:hidden;border-radius:18px;background:#e8f0e5}
+.download-map-functional .real-map-wrap{height:100%;min-height:0}
+.download-map-functional .real-map-download{left:12px;right:12px;bottom:12px;max-height:42%;overflow:auto}
+.download-help{margin:14px 18px 24px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.download-help strong{font-size:14px}
+.download-help p{font-size:12px;line-height:1.55;color:var(--muted);margin:7px 0 0}
