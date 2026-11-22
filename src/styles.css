@@ -45,3 +45,18 @@
 .map-screen .real-map-download.nav-manager{bottom:12px!important;max-height:38vh!important;z-index:5!important}
 .map-screen .real-map-actions{top:80px!important;z-index:5!important}
 .bottom-nav{z-index:30!important}
+
+/* NaviOffline real map redesign */
+.map-screen{position:fixed!important;top:0!important;left:50%!important;right:auto!important;bottom:74px!important;transform:translateX(-50%)!important;width:min(100%,520px)!important;height:auto!important;padding:0!important;z-index:1!important;background:#e8eaed!important;overflow:hidden!important}
+.map-screen>.real-map-wrap{position:absolute!important;inset:0!important;height:100%!important;width:100%!important;min-height:0!important}
+.map-screen .real-map{position:absolute!important;inset:0!important;height:100%!important;width:100%!important}
+.map-screen .nav-manager{top:12px!important;bottom:auto!important;left:12px!important;right:64px!important;width:auto!important;max-width:none!important;max-height:38dvh!important;overflow:auto!important;border-radius:22px!important;padding:12px!important;box-shadow:0 4px 18px #20212425!important}
+.map-screen .nav-search{position:relative!important;border:0!important;border-radius:18px!important;background:#f8f9fa!important;padding:2px 10px!important;min-height:48px!important}
+.map-screen .nav-search input{font-size:15px!important;color:#202124!important}
+.map-screen .nav-search-results{z-index:40!important;max-height:30vh!important;overflow:auto!important}
+.map-screen .real-map-actions{top:12px!important;right:12px!important;z-index:6!important}
+.map-screen .real-map-actions button{width:48px!important;height:48px!important;border-radius:50%!important;box-shadow:0 2px 8px #20212425!important}
+.map-directions-fab{position:absolute!important;right:16px!important;bottom:18px!important;width:58px!important;height:58px!important;border-radius:50%!important;background:#1a73e8!important;color:#fff!important;display:grid!important;place-items:center!important;box-shadow:0 4px 12px #1a73e844!important;z-index:7!important}
+.map-directions-fab svg{width:25px!important;height:25px!important}
+.map-screen .real-map-download.nav-manager button{min-height:42px!important}
+@media(max-width:520px){.map-screen{bottom:74px!important}}
