@@ -60,3 +60,25 @@
 .app:has(.nav-rebuild-overlay) .real-map-actions{display:none!important}
 .app:has(.nav-rebuild-overlay) .maplibregl-ctrl-top-right{display:none!important}
 @media(max-width:520px){.app:has(.nav-rebuild-overlay) .nav-rebuild-bottom{padding:12px 14px calc(14px + env(safe-area-inset-bottom,0px))!important}.app:has(.nav-rebuild-overlay) .nav-rebuild-summary strong{font-size:34px!important}.app:has(.nav-rebuild-overlay) .nav-rebuild-stats b{font-size:14px!important}}
+
+/* Navigation v2: compact Google-Maps-inspired hierarchy, dedicated side controls */
+.nav-rebuild-side{position:absolute;right:14px;top:50%;transform:translateY(-15%);display:flex;flex-direction:column;gap:10px;pointer-events:auto}
+.nav-rebuild-side button{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;border:1px solid #333;box-shadow:0 4px 14px #0004;font-size:25px;font-weight:600}
+.nav-rebuild-side button:active{transform:scale(.94)}
+.nav-rebuild-maneuver{background:#006b62!important;border-radius:24px!important;min-height:96px!important}
+.nav-rebuild-maneuver .nav-rebuild-arrow{font-size:42px!important;min-width:44px;text-align:center}
+.nav-rebuild-bottom{max-width:560px;margin:0 auto;background:#080808!important;border:1px solid #292929}
+.nav-rebuild-summary{grid-template-columns:48px 1fr 48px!important}
+.nav-rebuild-summary strong{font-size:32px!important;color:#8bd19d!important}
+.nav-rebuild-end,.nav-rebuild-action{width:44px!important;height:44px!important}
+.nav-rebuild-stats{justify-content:center!important;gap:50px!important}
+.nav-rebuild-stats b{font-size:14px!important}
+.nav-rebuild-stop{display:none!important}
+.app:has(.nav-rebuild-overlay) .nav-rebuild-side{z-index:110}
+.app:has(.nav-rebuild-overlay) .nav-rebuild-bottom{bottom:calc(env(safe-area-inset-bottom,0px) + 8px)!important}
+.app:has(.nav-rebuild-overlay) .nav-rebuild-top{left:12px!important;right:12px!important}
+.app:has(.nav-rebuild-overlay) .nav-rebuild-maneuver{padding:15px 14px!important;min-height:94px!important}
+.app:has(.nav-rebuild-overlay) .nav-rebuild-maneuver strong{font-size:clamp(19px,5vw,25px)!important}
+.app:has(.nav-rebuild-overlay) .nav-rebuild-maneuver small{font-size:14px!important}
+.app:has(.nav-rebuild-overlay) .nav-rebuild-side{top:43%!important;transform:none!important}
+@media(max-width:520px){.nav-rebuild-side{right:10px!important;gap:8px!important}.nav-rebuild-side button{width:44px;height:44px;font-size:23px}.nav-rebuild-bottom{padding:10px 14px 14px!important}.nav-rebuild-summary strong{font-size:32px!important}.nav-rebuild-stats{gap:34px!important}}
