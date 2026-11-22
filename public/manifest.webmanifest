@@ -1,11 +1,14 @@
 {
-  "name":"NaviOffline",
+  "name":"NaviOffline — Maps & Navigation",
   "short_name":"NaviOffline",
-  "description":"Maps and navigation — online or offline",
+  "description":"Navigate online or offline. Save destinations and app data locally.",
   "start_url":"/",
+  "scope":"/",
   "display":"standalone",
-  "background_color":"#f7f8fc",
-  "theme_color":"#ffffff",
+  "background_color":"#f5f7fc",
+  "theme_color":"#1769e8",
   "orientation":"portrait",
-  "icons":[]
+  "icons":[
+    {"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
 }
