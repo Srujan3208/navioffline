@@ -37,3 +37,11 @@
 .map-screen .real-map{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
 .map-screen .real-map-download.nav-manager{bottom:86px!important;max-height:42vh!important}
 .map-screen .real-map-actions{top:88px!important;right:16px!important}
+
+/* Full real-world map viewport on mobile */
+.map-screen{position:fixed!important;top:0!important;bottom:74px!important;left:50%!important;transform:translateX(-50%)!important;width:min(100%,520px)!important;height:auto!important;min-height:0!important;padding:0!important;z-index:1!important;overflow:hidden!important;background:#e8f0e5!important}
+.map-screen>.real-map-wrap,.map-screen .real-map{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important}
+.map-screen .real-map-wrap{overflow:hidden!important}
+.map-screen .real-map-download.nav-manager{bottom:12px!important;max-height:38vh!important;z-index:5!important}
+.map-screen .real-map-actions{top:80px!important;z-index:5!important}
+.bottom-nav{z-index:30!important}
