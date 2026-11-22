@@ -1,9 +1,11 @@
 import React,{useEffect,useRef,useState} from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import {Download,LocateFixed,Layers,Trash2,WifiOff,Route} from 'lucide-react';\nimport {downloadRoadGraph,listGraphs,loadGraph,routeOffline,speakInstruction,instructionFor} from './offlineRouting';
+import {Download,LocateFixed,Layers,Trash2,WifiOff,Route} from 'lucide-react';
+import {downloadRoadGraph,listGraphs,loadGraph,routeOffline,speakInstruction,instructionFor} from './offlineRouting';
 
-const DB='navio-map-tiles-v1',STORE='tiles';\nmaplibregl.addProtocol('offline',async(params:any)=>{const original=decodeURIComponent(params.url.slice('offline://'.length));let data=await readTile(original);if(!data){const response=await fetch(original);if(!response.ok)throw new Error('Tile request failed');data=await response.arrayBuffer();saveTile(original,data).catch(()=>{});}return{data};});
+const DB='navio-map-tiles-v1',STORE='tiles';
+maplibregl.addProtocol('offline',async(params:any)=>{const original=decodeURIComponent(params.url.slice('offline://'.length));let data=await readTile(original);if(!data){const response=await fetch(original);if(!response.ok)throw new Error('Tile request failed');data=await response.arrayBuffer();saveTile(original,data).catch(()=>{});}return{data};});
 function openDb(){return new Promise<IDBDatabase>((resolve,reject)=>{const r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
 async function readTile(key:string){const db=await openDb();return new Promise<any>((resolve,reject)=>{const r=db.transaction(STORE).objectStore(STORE).get(key);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
 async function saveTile(key:string,data:ArrayBuffer){const db=await openDb();return new Promise<void>((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put(data,key);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);});}
