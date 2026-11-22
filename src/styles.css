@@ -390,3 +390,41 @@
 .app:has(.dm-guidance) .dm-trip-remaining b{font-size:32px!important}
 .app:has(.dm-guidance) .dm-trip-remaining small{font-size:14px!important}
 @media(max-width:520px){.app:has(.dm-guidance) .dm-nav-controls{right:10px!important;top:37%!important;gap:8px!important}.app:has(.dm-guidance) .dm-nav-controls button,.app:has(.dm-guidance) .dm-mode-indicator{width:42px!important;height:42px!important}.app:has(.dm-guidance) .dm-maneuver-card{left:10px!important;right:10px!important;min-height:88px!important;padding:12px 12px!important}.app:has(.dm-guidance) .dm-maneuver-copy b{font-size:21px!important}.app:has(.dm-guidance) .dm-maneuver-copy small{font-size:13px!important}.app:has(.dm-guidance) .dm-nav-bottom{min-height:112px!important;grid-template-columns:46px 1fr 46px!important;padding:20px 12px 12px!important}.app:has(.dm-guidance) .dm-end-circle,.app:has(.dm-guidance) .dm-assistant-circle{width:44px!important;height:44px!important}.app:has(.dm-guidance) .dm-trip-remaining b{font-size:30px!important}}
+
+/* Directions screen refinement: compact stacked endpoints + bottom route picker */
+.dm-top{top:12px!important;left:12px!important;right:12px!important;gap:8px!important;align-items:flex-start!important}
+.dm-top>button{width:42px!important;height:42px!important;margin-top:8px!important;background:#fff!important;border:1px solid #edf0f3!important;box-shadow:0 4px 14px #10182818!important}
+.dm-search-stack{border-radius:22px!important;padding:6px 10px!important;box-shadow:0 8px 24px #10182820!important;border:1px solid #f0f2f5!important}
+.dm-field{min-height:52px!important;gap:10px!important;padding:0 8px!important;border-bottom:1px solid #e8edf2!important}
+.dm-field input{font-size:16px!important;font-weight:500!important;letter-spacing:-.2px!important}
+.dm-field button{width:36px!important;height:36px!important;background:#f4f6f8!important;color:#5b6470!important}
+.dm-dot{width:12px!important;height:12px!important;box-shadow:0 0 0 4px #f2f5f9!important}
+.dm-dot.red{background:#e84b45!important}
+.dm-locate{top:126px!important;right:2px!important;width:44px!important;height:44px!important;box-shadow:0 4px 16px #10182820!important}
+.dm-sheet{left:12px!important;right:12px!important;bottom:12px!important;padding:14px!important;border-radius:26px!important;max-height:38dvh!important;box-shadow:0 12px 36px #10182825!important}
+.dm-modes{gap:6px!important;margin:0 0 12px!important}
+.dm-modes button{min-height:44px!important;padding:9px 5px!important;border-radius:13px!important;font-size:13px!important;background:#f6f7f9!important}
+.dm-modes button svg{width:18px!important;height:18px!important}
+.dm-modes button.active{background:#e5f0ff!important;color:#1769e8!important;box-shadow:inset 0 0 0 1px #c6dcff!important}
+.dm-primary{min-height:50px!important;border-radius:15px!important;font-size:15px!important;box-shadow:0 4px 12px #1769e825!important}
+.dm-sheet-head{margin-bottom:8px!important}
+.dm-sheet-head b{font-size:20px!important;letter-spacing:-.3px!important}
+.dm-route{padding:12px 14px!important;margin:6px 0!important;border-radius:16px!important;min-height:68px!important}
+.dm-route span b{font-size:19px!important}
+.dm-route span small{font-size:14px!important}
+.dm-route.selected{background:#edf4ff!important;border:1.5px solid #1769e8!important;box-shadow:0 2px 8px #1769e812!important}
+.dm-route>span:last-child{font-size:13px!important;color:#667085!important;font-weight:600!important}
+.dm-guidance{left:0!important;right:0!important;top:0!important;bottom:0!important;justify-content:space-between!important}
+.dm-maneuver-card{margin:calc(env(safe-area-inset-top,0px) + 12px) 12px 0!important;border-radius:24px!important;padding:16px!important;min-height:94px!important;box-shadow:0 8px 24px #0002!important}
+.dm-maneuver-icon{width:42px!important;height:42px!important;flex:none!important}
+.dm-maneuver-copy b{font-size:21px!important;line-height:1.15!important}
+.dm-maneuver-copy small{font-size:14px!important;margin-top:5px!important}
+.dm-voice{width:44px!important;height:44px!important;border-radius:50%!important}
+.dm-nav-controls{right:12px!important;top:42%!important;gap:8px!important}
+.dm-nav-controls button{width:44px!important;height:44px!important;border-radius:50%!important;box-shadow:0 4px 14px #0003!important}
+.dm-mode-indicator{width:42px!important;height:42px!important;border-radius:50%!important;background:#1769e8!important;color:#fff!important;box-shadow:0 4px 14px #0003!important}
+.dm-nav-bottom{left:12px!important;right:12px!important;bottom:calc(env(safe-area-inset-bottom,0px) + 12px)!important;border-radius:26px!important;padding:14px!important;min-height:94px!important;box-shadow:0 10px 30px #0004!important}
+.dm-end-circle,.dm-assistant-circle{width:44px!important;height:44px!important;border-radius:50%!important}
+.dm-trip-remaining b{font-size:30px!important;line-height:1!important}
+.dm-trip-remaining small{font-size:14px!important;margin-top:5px!important}
+@media(max-width:520px){.dm-sheet{max-height:36dvh!important;padding:12px!important}.dm-route{min-height:62px!important}.dm-modes button{min-height:42px!important}.dm-maneuver-card{min-height:88px!important;padding:14px!important}.dm-maneuver-copy b{font-size:19px!important}.dm-nav-controls{top:40%!important}.dm-nav-bottom{padding:12px!important}.dm-trip-remaining b{font-size:28px!important}}
