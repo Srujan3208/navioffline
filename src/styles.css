@@ -436,3 +436,5 @@
 .download-help{margin:14px 18px 24px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
 .download-help strong{font-size:14px}
 .download-help p{font-size:12px;line-height:1.55;color:var(--muted);margin:7px 0 0}
+
+.shared-preview{margin:14px 0;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;gap:9px}.shared-preview>svg{color:var(--blue);width:24px}.shared-preview strong{font-size:15px}.shared-preview small{color:var(--muted);font-size:12px;overflow-wrap:anywhere}.shared-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:5px}.shared-actions button{background:#edf4ff;color:#1769e8;border-radius:11px;padding:10px 5px;display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px;font-weight:650}.shared-actions svg{width:15px;height:15px}
