@@ -70,7 +70,7 @@
 .map-screen .nav-search input{font-size:15px!important}
 .map-screen .real-map-actions{top:84px!important;right:12px!important;gap:10px!important}
 .map-screen .real-map-actions button{width:48px!important;height:48px!important;border-radius:50%!important;background:#fff!important;box-shadow:0 3px 12px #17203320!important}
-.map-screen .real-map-actions button:nth-child(n+2){display:none!important}
+/* Keep zoom and map controls available */
 .map-panel-toggle{position:absolute!important;top:14px!important;left:14px!important;right:72px!important;height:54px!important;padding:0 18px!important;background:#fff!important;border-radius:18px!important;box-shadow:0 3px 14px #17203322!important;text-align:left!important;color:#667085!important;font-size:15px!important;z-index:8!important}
 .map-panel-toggle:after{content:'Search places, streets or destinations';margin-left:10px}
 .map-screen .map-directions-fab{bottom:16px!important;right:16px!important;width:56px!important;height:56px!important;z-index:8!important}
@@ -109,3 +109,12 @@
 .map-screen .map-panel-toggle{height:56px!important;border-radius:30px!important}
 .map-screen .map-directions-fab{display:none!important}
 .navio-gps-accuracy{background:#4285f430!important;border:1px solid #4285f470!important;box-shadow:0 0 0 1px #4285f410!important}
+
+/* Global map, zoom and autocomplete upgrades */
+.map-screen .real-map-actions{display:flex!important;flex-direction:column!important;gap:8px!important}
+.map-screen .real-map-actions button{display:grid!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;font-size:24px!important;font-weight:500!important}
+.map-screen .nav-manager{max-height:56dvh!important}
+.map-screen .nav-search-results button{padding:13px 14px!important;min-height:58px!important;font-size:15px!important;text-align:left!important;border-bottom:1px solid #eef0f3!important}
+.map-screen .nav-search-results button small{font-size:12px!important;line-height:1.4!important;white-space:normal!important}
+.map-screen .nav-search input{height:54px!important;padding:0 16px!important;font-size:16px!important}
+.map-screen .map-panel-toggle:after{content:'Search places, streets, businesses or destinations'!important}
