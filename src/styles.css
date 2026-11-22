@@ -168,3 +168,6 @@
 .dm-status-pill{position:absolute;top:180px;left:50%;transform:translateX(-50%);background:#fff;border-radius:20px;padding:8px 14px;box-shadow:0 2px 8px #20212420;z-index:4;font-size:12px;white-space:nowrap}
 .dm-gps{width:20px;height:20px;border:3px solid white;border-radius:50%;background:#1a73e8;box-shadow:0 0 0 8px #1a73e830,0 1px 5px #0004}
 @media(max-width:520px){.directions-screen{bottom:74px!important}.dm-sheet{max-height:42vh}.dm-locate{top:112px}}
+
+/* Search feedback states */
+.map-screen .nav-search-state{padding:14px 16px;color:#5f6368;font-size:14px;background:#fff;border-radius:0 0 16px 16px;min-height:20px}.map-screen .nav-search-results{box-shadow:0 6px 18px #20212418;border-radius:0 0 16px 16px}.map-screen .nav-search-results button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-height:60px}.map-screen .nav-search-results button small{color:#6b7280;font-size:12px;line-height:1.4}
