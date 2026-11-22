@@ -1,7 +1,7 @@
 import React,{useEffect,useRef,useState} from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import {Download,LocateFixed,Layers,Trash2,WifiOff,Route} from 'lucide-react';
+import {Download,LocateFixed,Layers,Trash2,WifiOff,Route,Navigation} from 'lucide-react';
 import {downloadRoadGraph,listGraphs,loadGraph,routeOffline,speakInstruction,instructionFor} from './offlineRouting';
 
 const DB='navio-map-tiles-v1',STORE='tiles';
@@ -15,7 +15,7 @@ export default function RealMap({downloadMode=false,onDownloaded,onRoute}:any){
  const el=useRef<HTMLDivElement>(null),map=useRef<maplibregl.Map|null>(null),[ready,setReady]=useState(false),[progress,setProgress]=useState(''),[offline,setOffline]=useState(!navigator.onLine),[graphs,setGraphs]=useState<any[]>([]),[routeInfo,setRouteInfo]=useState<any>(null),[nav,setNav]=useState(false);
  useEffect(()=>{const online=()=>setOffline(!navigator.onLine);window.addEventListener('online',online);window.addEventListener('offline',online);
  if(!el.current)return;
- map.current=new maplibregl.Map({container:el.current,style:'https://tiles.openfreemap.org/styles/liberty',center:[74.99,13.34],zoom:11,attributionControl:true,transformRequest:(url:string,resourceType:any)=>resourceType==='Tile'?{url:'offline://'+encodeURIComponent(url)}:{url}});
+ map.current=new maplibregl.Map({container:el.current,style:'https://tiles.openfreemap.org/styles/liberty',center:[74.99,13.34],zoom:11,attributionControl:false,transformRequest:(url:string,resourceType:any)=>resourceType==='Tile'?{url:'offline://'+encodeURIComponent(url)}:{url}});
  map.current.addControl(new maplibregl.NavigationControl({showCompass:true}), 'top-right');
  map.current.on('load',()=>{setReady(true);listGraphs().then(setGraphs).catch(()=>{});});
  map.current.on('click',e=>{if(downloadMode){new maplibregl.Marker({color:'#6d28d9'}).setLngLat(e.lngLat).addTo(map.current!);}});
