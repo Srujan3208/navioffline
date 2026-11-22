@@ -3,7 +3,10 @@ import maplibregl from'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './map-experience.css';
 import {Search,LocateFixed,Plus,Minus,Layers,Route,MapPin,Utensils,Hotel,Fuel,Hospital,ShoppingBag,ParkingCircle,X,ArrowRight,Clock,Compass,Store,Bus,School,Landmark,Building2}from'lucide-react';
-type Place={name:string,address:string,coords:[number,number],category?:string};\nconst CACHE_TTL=24*60*60*1000;\nconst getCache=(key:string)=>{try{const v=JSON.parse(localStorage.getItem(key)||'null');return v&&Date.now()-v.time<CACHE_TTL?v.data:null;}catch{return null;}};\nconst putCache=(key:string,data:any)=>{try{localStorage.setItem(key,JSON.stringify({time:Date.now(),data}));}catch{}};
+type Place={name:string,address:string,coords:[number,number],category?:string};
+const CACHE_TTL=24*60*60*1000;
+const getCache=(key:string)=>{try{const v=JSON.parse(localStorage.getItem(key)||'null');return v&&Date.now()-v.time<CACHE_TTL?v.data:null;}catch{return null;}};
+const putCache=(key:string,data:any)=>{try{localStorage.setItem(key,JSON.stringify({time:Date.now(),data}));}catch{}};
 const categories=[{label:'Restaurants',icon:Utensils,tag:'restaurant',filter:'amenity=restaurant'},{label:'Hotels',icon:Hotel,tag:'hotel',filter:'tourism=hotel'},{label:'Fuel',icon:Fuel,tag:'fuel',filter:'amenity=fuel'},{label:'Hospitals',icon:Hospital,tag:'hospital',filter:'amenity=hospital'},{label:'Shops',icon:ShoppingBag,tag:'shop',filter:'shop'},{label:'ATMs',icon:ParkingCircle,tag:'atm',filter:'amenity=atm'},{label:'Pharmacies',icon:Hospital,tag:'pharmacy',filter:'amenity=pharmacy'},{label:'Banks',icon:Landmark,tag:'bank',filter:'amenity=bank'},{label:'Supermarkets',icon:Store,tag:'supermarket',filter:'shop=supermarket'},{label:'Bus stops',icon:Bus,tag:'bus',filter:'highway=bus_stop'},{label:'Schools',icon:School,tag:'school',filter:'amenity=school'},{label:'Convenience',icon:Building2,tag:'convenience',filter:'shop=convenience'}];
 export default function MapExperience({onDirections}:any){
  const el=useRef<HTMLDivElement>(null),map=useRef<maplibregl.Map|null>(null),gps=useRef<maplibregl.Marker|null>(null),poiMarkers=useRef<maplibregl.Marker[]>([]),searchTimer=useRef<any>(null),abort=useRef<AbortController|null>(null);
