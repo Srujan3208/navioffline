@@ -1,6 +1,6 @@
 import React,{useEffect,useRef,useState} from 'react';
 import maplibregl from 'maplibre-gl';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import 'maplibre-gl/dist/maplibre-gl.css';\nimport './map-experience.css';
 import {Search,LocateFixed,Plus,Minus,Layers,Route,MapPin,Utensils,Hotel,Fuel,Hospital,ShoppingBag,ParkingCircle,X,ArrowRight} from 'lucide-react';
 type Place={name:string,address:string,coords:[number,number],category?:string};
 const categories=[{label:'Restaurants',icon:Utensils,tag:'restaurant'},{label:'Hotels',icon:Hotel,tag:'hotel'},{label:'Fuel',icon:Fuel,tag:'fuel'},{label:'Hospitals',icon:Hospital,tag:'hospital'},{label:'Shopping',icon:ShoppingBag,tag:'shop'},{label:'Parking',icon:ParkingCircle,tag:'parking'}];
