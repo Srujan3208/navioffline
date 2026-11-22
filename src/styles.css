@@ -30,3 +30,10 @@
 .real-map-download{max-height:45vh;overflow:auto}.real-map-download button{display:flex;align-items:center;gap:8px;background:#eef4ff;color:#1769e8;padding:9px 12px;border-radius:10px;margin:6px 0;font-size:12px}.real-map-download button:disabled{opacity:.5}.graph-manager{border-top:1px solid #dbe2ec;margin-top:10px;padding-top:8px}.graph-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #e5e7eb;font-size:11px}.graph-row span{display:flex;flex-direction:column;gap:3px}.graph-row small{color:#64748b}.graph-row button{padding:6px;color:#dc2626;background:#fee2e2}.mode-row{display:flex;gap:5px}.mode-row button{flex:1;text-transform:capitalize}.mode-row button.selected{background:#1769e8;color:white}.nav-manager{bottom:10px;left:10px;right:10px;max-width:calc(100% - 20px);}
 
 .nav-search{position:relative;width:100%;margin-bottom:8px}.nav-search input{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #d8deea;border-radius:14px;background:white;color:#172033;font:inherit}.nav-search-results{position:absolute;z-index:20;top:100%;left:0;right:0;background:white;border-radius:12px;box-shadow:0 8px 24px #0002;max-height:220px;overflow:auto}.nav-search-results button{display:block;width:100%;text-align:left;padding:10px 14px;border:0;background:white;color:#172033}.nav-search-results button+button{border-top:1px solid #eee}.nav-search-results small{display:block;color:#687386;margin-top:3px}
+
+/* Fix mobile map viewport: make the map fill the complete tab area */
+.map-screen{position:relative!important;height:calc(100dvh - 74px)!important;min-height:0!important;overflow:hidden!important;padding:0!important}
+.map-screen>.real-map-wrap{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important}
+.map-screen .real-map{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+.map-screen .real-map-download.nav-manager{bottom:86px!important;max-height:42vh!important}
+.map-screen .real-map-actions{top:88px!important;right:16px!important}
