@@ -340,3 +340,36 @@
 .directions-map:has(.dm-guidance) .dm-status-pill{top:132px!important;z-index:44!important}
 .directions-map:has(.dm-guidance) .maplibregl-ctrl-bottom-right{bottom:145px!important}
 @media(max-width:520px){.directions-map:has(.dm-guidance){bottom:0!important}}
+
+/* Immersive turn-by-turn navigation: full-screen map, no app tabs or overlapping controls */
+.app:has(.dm-guidance) .bottom-nav{display:none!important}
+.app:has(.dm-guidance) .directions-map{position:fixed!important;inset:0!important;bottom:0!important;height:100dvh!important;z-index:90!important;background:#f7f5f0}
+.app:has(.dm-guidance) .directions-map-canvas{position:absolute!important;inset:0!important;height:100dvh!important}
+.app:has(.dm-guidance) .dm-top{display:none!important}
+.app:has(.dm-guidance) .dm-nav-controls,.app:has(.dm-guidance) .dm-report{display:none!important}
+.app:has(.dm-guidance) .dm-guidance{position:fixed!important;inset:0!important;z-index:120!important;pointer-events:none!important}
+.app:has(.dm-guidance) .dm-maneuver-card{position:absolute!important;top:calc(env(safe-area-inset-top,0px) + 12px)!important;left:14px!important;right:14px!important;min-height:112px!important;padding:20px 18px!important;border-radius:26px!important;background:#00645f!important;color:#fff!important;box-shadow:0 8px 24px #0003!important;display:flex!important;align-items:center!important;gap:14px!important;pointer-events:auto!important}
+.app:has(.dm-guidance) .dm-maneuver-icon{flex:0 0 52px!important;width:52px!important;height:52px!important;display:grid!important;place-items:center!important;color:#fff!important}
+.app:has(.dm-guidance) .dm-maneuver-icon svg{width:48px!important;height:48px!important}
+.app:has(.dm-guidance) .dm-maneuver-copy{flex:1!important;min-width:0!important}
+.app:has(.dm-guidance) .dm-maneuver-copy b{font-size:clamp(22px,6vw,30px)!important;line-height:1.15!important;white-space:normal!important}
+.app:has(.dm-guidance) .dm-maneuver-copy small{display:block!important;font-size:16px!important;margin-top:8px!important;opacity:.92!important}
+.app:has(.dm-guidance) .dm-voice{width:54px!important;height:54px!important;flex:0 0 54px!important;border-radius:50%!important;background:#ffffff20!important;color:white!important;display:grid!important;place-items:center!important}
+.app:has(.dm-guidance) .dm-nav-bottom{position:absolute!important;left:0!important;right:0!important;bottom:calc(env(safe-area-inset-bottom,0px) + 10px)!important;min-height:150px!important;border-radius:30px 30px 0 0!important;background:#050505!important;color:#fff!important;padding:22px 24px 18px!important;display:grid!important;grid-template-columns:64px 1fr 64px!important;align-items:center!important;gap:10px!important;pointer-events:auto!important;box-shadow:0 -12px 35px #0003!important}
+.app:has(.dm-guidance) .dm-nav-bottom:before{content:'';position:absolute;top:10px;left:50%;transform:translateX(-50%);width:48px;height:5px;border-radius:10px;background:#777}
+.app:has(.dm-guidance) .dm-end-circle,.app:has(.dm-guidance) .dm-assistant-circle{width:58px!important;height:58px!important;border:1px solid #4b4b4b!important;border-radius:50%!important;background:#080808!important;color:white!important;display:grid!important;place-items:center!important}
+.app:has(.dm-guidance) .dm-assistant-circle{color:#60a5fa!important}
+.app:has(.dm-guidance) .dm-trip-remaining{text-align:center!important;display:grid!important;gap:6px!important}
+.app:has(.dm-guidance) .dm-trip-remaining b{font-size:38px!important;color:#81c995!important;line-height:1!important}
+.app:has(.dm-guidance) .dm-trip-remaining small{font-size:16px!important;color:#ddd!important}
+.app:has(.dm-guidance) .dm-status-pill{display:none!important}
+/* Refined origin/destination input stack */
+.dm-top{left:14px!important;right:14px!important}
+.dm-search-stack{border-radius:24px!important;overflow:visible!important;background:#fff!important;box-shadow:0 8px 28px #0002!important;padding:8px 14px!important}
+.dm-field{min-height:58px!important;gap:12px!important;padding:4px 8px!important}
+.dm-field+.dm-field{border-top:1px solid #e7e9ed!important;margin-top:4px!important;padding-top:8px!important}
+.dm-field input{font-size:16px!important;min-width:0!important;line-height:1.25!important}
+.dm-field button{width:42px!important;height:42px!important;border-radius:50%!important;background:#f1f3f5!important;flex:0 0 42px!important}
+.dm-dot{width:12px!important;height:12px!important;flex:0 0 12px!important}
+.dm-results{border-radius:18px!important;overflow:hidden!important;box-shadow:0 10px 30px #0002!important}
+@media(max-width:520px){.app:has(.dm-guidance) .dm-maneuver-card{left:12px!important;right:12px!important;min-height:104px!important;padding:16px 14px!important}.app:has(.dm-guidance) .dm-nav-bottom{grid-template-columns:54px 1fr 54px!important;padding:24px 16px 18px!important;min-height:138px!important}.app:has(.dm-guidance) .dm-end-circle,.app:has(.dm-guidance) .dm-assistant-circle{width:52px!important;height:52px!important}.app:has(.dm-guidance) .dm-trip-remaining b{font-size:34px!important}.app:has(.dm-guidance) .dm-trip-remaining small{font-size:14px!important}}
