@@ -124,3 +124,9 @@
 
 /* Route alternatives and live navigation guidance */
 .route-alternatives{display:grid;gap:8px;margin:8px 0}.route-alternatives>strong,.turn-list>strong{font-size:14px;color:#202124}.route-alternatives button{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #e3e8ef;background:#fff;border-radius:14px;padding:12px;color:#344054}.route-alternatives button.selected{border:2px solid #1769e8;background:#eef4ff}.turn-list{display:grid;gap:8px;margin-top:12px}.turn-list>div{display:flex;gap:10px;align-items:flex-start;background:#f8fafc;padding:10px;border-radius:12px;color:#202124}.turn-list>div>span{background:#1769e8;color:white;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;flex:none}.turn-list section{display:grid;gap:4px;font-size:13px}.turn-list small{color:#667085}
+
+/* FIX: restore zoom controls that were accidentally hidden */
+.map-screen .real-map-actions button:nth-child(n+2){display:grid!important}
+.map-screen .real-map-actions{top:80px!important;right:12px!important;gap:6px!important}
+.map-screen .real-map-actions button{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important}
+.map-screen .nav-manager{max-height:48dvh!important}
